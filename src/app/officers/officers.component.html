@@ -1,0 +1,53 @@
+<span class="h1 d-flex">Officers</span>
+
+<button
+  routerLink="/offCreate"
+  class="mt-2 mb-4"
+  mat-raised-button
+  color="accent"
+>
+  Create New Officer
+</button>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th class="h3">Name</th>
+      <th class="h3">Age</th>
+      <th class="h3">Department</th>
+      <th class="h3">Actions</th>
+    </tr>
+  </thead>
+  <tbody *ngIf="spiners == false">
+    <tr *ngFor="let officer of officers">
+      <td class="h6">{{ officer.name }}</td>
+      <td class="h6">{{ officer.age }}</td>
+      <td class="h6">{{officer.department.name}}</td>
+      <td>
+        <button
+          (click)="deleteOfficer(officer.id)"
+          class="btn btn-danger mr-2"
+        >
+          Delete
+        </button>
+        <button
+          routerLink="/officer/{{ officer.id }}"
+          class="btn btn-primary mr-2"
+        >
+          Details
+        </button>
+        <button
+        routerLink="/offEdit/{{officer.id}}"
+          class="btn btn-success"
+        >
+          Edit
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div *ngIf="spiners" class="spinner-grow text-primary spinericon" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+

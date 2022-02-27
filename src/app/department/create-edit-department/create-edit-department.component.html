@@ -1,0 +1,33 @@
+<form
+  class="example-form"
+  [formGroup]="departmentForm"
+  (ngSubmit)="createEditDepartment()"
+>
+  <mat-form-field class="example-full-width d-flex" appearance="fill">
+    <mat-label class="text-info">Department Name</mat-label>
+    <input
+      matInput type="text" formControlName="name" placeholder="Department Full Name"/>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width d-flex" appearance="fill">
+    <mat-label class="text-info">Location</mat-label>
+    <input matInput type="text" formControlName="location" placeholder="State" />
+  </mat-form-field>
+
+  <button
+    type="submit"
+    *ngIf="pagemode == pageModeEnum.Edit"
+    mat-raised-button
+    color="primary"
+  >
+    Edit
+  </button>
+  <button
+    type="submit"
+    *ngIf="pagemode == pageModeEnum.Create"
+    mat-raised-button
+    color="accent"
+  >
+    Create
+  </button>
+</form>

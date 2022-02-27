@@ -1,0 +1,30 @@
+
+  <!-- <nav class="navbar navbar-expand-lg navbar-light LightBlackBG ">
+    <mat-icon class="PoliceIcon" aria-hidden="false" aria-label="Example home icon">local_police</mat-icon>
+    <span>Police Ministry</span>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav justify-content-center">
+        <li class="nav-item">
+          <button class="mr-3 h5" mat-button >Departments</button>
+        </li>
+        <li class="nav-item">
+          <button class="mr-3 h5" mat-button >Officers</button>
+        </li>
+        <li class="nav-item">
+          <button class="mr-3 h5" mat-button >Accent</button>
+        </li>
+      </ul>
+    </div>
+  </nav> -->
+
+  <nav class="nav LightBlackBG p-2">
+    <mat-icon class="PoliceIcon" aria-hidden="false" aria-label="Example home icon">local_police</mat-icon>
+    <span class="ml-3 mr-3 marginAuto h2 ccccolor">Police Ministry</span>
+    <button class="mr-3 h5 ccccolor" routerLink="/departments" mat-button >Departments</button>
+    <button class="mr-3 h5 ccccolor" routerLink="/officers" mat-button >Officers</button>
+    <button class="mr-3 h5 ccccolor" mat-button >Cars</button>
+  </nav>
+  
+  <div class="container mt-5">
+  <router-outlet></router-outlet>
+  </div>
